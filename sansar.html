@@ -1,0 +1,1276 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fitzone Fitness Club - Premier 10,000 sq. ft. gym in Santacruz West, Mumbai for age 16+. Certified trainers, modern strength & cardio equipment, yoga, and personal training. Plans start at ₹999/mo.">
+    <meta name="keywords" content="Fitzone Fitness Club, Gym in Santacruz West, Mumbai Gym, Fitness Club Mumbai, Personal Trainers Santacruz, Yoga Santacruz, CrossFit Mumbai">
+    <meta name="author" content="Fitzone Fitness Club">
+    
+    <!-- Open Graph Meta Tags for Social & SEO -->
+    <meta property="og:title" content="Fitzone Fitness Club | Best Gym in Santacruz West, Mumbai">
+    <meta property="og:description" content="Transform your fitness journey at Fitzone Fitness Club. 20+ years of legacy, high-tech equipment, expert trainers. Join today from ₹999/mo!">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80">
+
+    <title>Fitzone Fitness Club | Santacruz West, Mumbai</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#ff5722',
+                            bright: '#ff7043',
+                            darkorange: '#e64a19',
+                            dark: '#0a0a0a',
+                            card: '#141414',
+                            surface: '#1e1e1e',
+                            border: '#2a2a2a'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Oswald', 'Montserrat', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e7eb;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Oswald', 'Montserrat', sans-serif;
+            letter-spacing: 0.03em;
+        }
+        /* Custom Glowing Hover Effects */
+        .glow-btn {
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(255, 87, 34, 0.3);
+        }
+        .glow-btn:hover {
+            box-shadow: 0 0 25px rgba(255, 87, 34, 0.7);
+            transform: translateY(-2px);
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+            border-color: #ff5722;
+            box-shadow: 0 10px 30px -10px rgba(255, 87, 34, 0.3);
+        }
+        /* Page transition smoothness */
+        .page-section {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .page-section.active {
+            display: block;
+            opacity: 1;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #262626;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ff5722;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-gray-200 antialiased flex flex-col min-h-screen">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-gradient-to-r from-brand-darkorange via-brand-orange to-amber-600 text-white text-xs sm:text-sm font-semibold py-2 px-4 text-center tracking-wide flex items-center justify-center gap-2 shadow-md">
+        <span class="bg-white text-brand-darkorange px-2 py-0.5 rounded text-xs uppercase font-extrabold animate-pulse">Special Offer</span>
+        <span>Join Fitzone Santacruz West Today & Get 1 Free Personal Training Session! (Ages 16+)</span>
+        <button onclick="openModal()" class="underline font-bold hover:text-black ml-2 cursor-pointer transition-colors">Claim Now</button>
+    </div>
+
+    <!-- MAIN NAVIGATION BAR -->
+    <header class="sticky top-0 z-40 bg-brand-dark/95 backdrop-blur-md border-b border-brand-border/60 transition-all duration-300" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- BRAND LOGO -->
+                <a href="#" onclick="navigateTo('home'); return false;" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 bg-brand-orange text-white flex items-center justify-center rounded-xl font-black text-2xl tracking-tighter shadow-lg group-hover:scale-105 transition-transform">
+                        <i class="fa-solid font-black fa-dumbbell"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-black tracking-wider text-white uppercase leading-none font-heading">
+                            FITZONE<span class="text-brand-orange">.</span>
+                        </span>
+                        <span class="text-[10px] tracking-widest text-gray-400 uppercase font-medium">Santacruz West</span>
+                    </div>
+                </a>
+
+                <!-- DESKTOP NAVIGATION LINKS -->
+                <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 font-medium text-sm">
+                    <button onclick="navigateTo('home')" id="nav-home" class="nav-btn px-3 py-2 rounded-lg text-brand-orange font-bold transition-all hover:bg-brand-surface">Home</button>
+                    <button onclick="navigateTo('about')" id="nav-about" class="nav-btn px-3 py-2 rounded-lg text-gray-300 hover:text-white transition-all hover:bg-brand-surface">About Us</button>
+                    <button onclick="navigateTo('membership')" id="nav-membership" class="nav-btn px-3 py-2 rounded-lg text-gray-300 hover:text-white transition-all hover:bg-brand-surface">Membership</button>
+                    <button onclick="navigateTo('trainers')" id="nav-trainers" class="nav-btn px-3 py-2 rounded-lg text-gray-300 hover:text-white transition-all hover:bg-brand-surface">Trainers</button>
+                    <button onclick="navigateTo('gallery')" id="nav-gallery" class="nav-btn px-3 py-2 rounded-lg text-gray-300 hover:text-white transition-all hover:bg-brand-surface">Gallery</button>
+                    <button onclick="navigateTo('contact')" id="nav-contact" class="nav-btn px-3 py-2 rounded-lg text-gray-300 hover:text-white transition-all hover:bg-brand-surface">Contact</button>
+                </nav>
+
+                <!-- DESKTOP CTA & ACTION -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="tel:0000000000" class="text-xs text-gray-400 hover:text-white flex items-center gap-1.5 transition-colors">
+                        <i class="fa-solid fa-phone text-brand-orange"></i> 0000000000
+                    </a>
+                    <button onclick="openModal()" class="glow-btn bg-brand-orange hover:bg-brand-darkorange text-white font-bold px-5 py-2.5 rounded-xl uppercase tracking-wider text-xs transition-all flex items-center gap-2">
+                        <span>Join Now</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- MOBILE HAMBURGER BUTTON -->
+                <div class="flex md:hidden items-center gap-2">
+                    <button onclick="openModal()" class="bg-brand-orange text-white px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider">
+                        Join
+                    </button>
+                    <button id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" class="p-2 text-gray-300 hover:text-white rounded-lg focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl" id="menuIcon"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- MOBILE MENU CONTAINER -->
+        <div id="mobileMenu" class="hidden md:hidden bg-brand-card border-b border-brand-border px-4 pt-3 pb-6 space-y-2">
+            <button onclick="navigateTo('home'); toggleMobileMenu();" class="mobile-nav-btn block w-full text-left px-4 py-3 rounded-xl font-semibold text-brand-orange bg-brand-surface">Home</button>
+            <button onclick="navigateTo('about'); toggleMobileMenu();" class="mobile-nav-btn block w-full text-left px-4 py-3 rounded-xl font-semibold text-gray-300 hover:text-white hover:bg-brand-surface">About Us</button>
+            <button onclick="navigateTo('membership'); toggleMobileMenu();" class="mobile-nav-btn block w-full text-left px-4 py-3 rounded-xl font-semibold text-gray-300 hover:text-white hover:bg-brand-surface">Membership Plans</button>
+            <button onclick="navigateTo('trainers'); toggleMobileMenu();" class="mobile-nav-btn block w-full text-left px-4 py-3 rounded-xl font-semibold text-gray-300 hover:text-white hover:bg-brand-surface">Our Trainers</button>
+            <button onclick="navigateTo('gallery'); toggleMobileMenu();" class="mobile-nav-btn block w-full text-left px-4 py-3 rounded-xl font-semibold text-gray-300 hover:text-white hover:bg-brand-surface">Gym Gallery</button>
+            <button onclick="navigateTo('contact'); toggleMobileMenu();" class="mobile-nav-btn block w-full text-left px-4 py-3 rounded-xl font-semibold text-gray-300 hover:text-white hover:bg-brand-surface">Contact Us</button>
+            
+            <div class="pt-4 border-t border-brand-border mt-3 flex flex-col gap-3">
+                <a href="tel:0000000000" class="text-sm text-gray-300 flex items-center justify-center gap-2 py-2">
+                    <i class="fa-solid fa-phone text-brand-orange"></i> Call Us: 0000000000
+                </a>
+                <button onclick="openModal(); toggleMobileMenu();" class="w-full bg-brand-orange hover:bg-brand-darkorange text-white py-3 rounded-xl font-bold uppercase text-sm tracking-wider shadow-lg">
+                    Register / Join Now
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- MAIN CONTENT CONTAINERS FOR Dynamic Single-Page Routing -->
+    <main class="flex-grow">
+
+        <!-- ================= PAGE 1: HOME PAGE ================= -->
+        <section id="page-home" class="page-section active">
+            <!-- HERO SECTION -->
+            <div class="relative bg-gradient-to-b from-brand-dark via-brand-card to-brand-dark py-20 lg:py-28 overflow-hidden border-b border-brand-border">
+                <!-- Background decorative elements -->
+                <div class="absolute inset-0 opacity-20 pointer-events-none">
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1920&q=80" alt="Gym background" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -top-32 -right-32 w-96 h-96 bg-brand-orange/20 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                            <div class="inline-flex items-center gap-2 bg-brand-surface border border-brand-orange/40 text-brand-orange px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                                <i class="fa-solid fa-location-dot"></i> Santacruz West, Mumbai (Age 16+)
+                            </div>
+                            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white uppercase leading-none tracking-tight">
+                                BUILD YOUR <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-amber-500">ULTIMATE</span> BODY AT FITZONE
+                            </h1>
+                            <p class="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                                Experience Mumbai’s high-performance 10,000 sq. ft. fitness arena. Certified trainers, state-of-the-art equipment, and results-driven training programs for ages 16 and above.
+                            </p>
+                            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                                <button onclick="openModal()" class="w-full sm:w-auto glow-btn bg-brand-orange hover:bg-brand-darkorange text-white font-black px-8 py-4 rounded-xl uppercase tracking-wider text-sm">
+                                    Start Free Trial / Join Now
+                                </button>
+                                <button onclick="navigateTo('membership')" class="w-full sm:w-auto border border-gray-700 hover:border-brand-orange text-gray-200 hover:text-white font-bold px-8 py-4 rounded-xl uppercase tracking-wider text-sm transition-all bg-brand-surface/50">
+                                    Explore Plans (From ₹999)
+                                </button>
+                            </div>
+
+                            <!-- STATS COUNTER BAR -->
+                            <div class="grid grid-cols-3 gap-4 pt-8 border-t border-brand-border/80 max-w-lg mx-auto lg:mx-0">
+                                <div class="text-center lg:text-left">
+                                    <p class="text-2xl sm:text-4xl font-black text-white font-heading">20+</p>
+                                    <p class="text-xs text-gray-400 font-medium uppercase tracking-wider">Years Legacy</p>
+                                </div>
+                                <div class="text-center lg:text-left">
+                                    <p class="text-2xl sm:text-4xl font-black text-brand-orange font-heading">5,000+</p>
+                                    <p class="text-xs text-gray-400 font-medium uppercase tracking-wider">Active Members</p>
+                                </div>
+                                <div class="text-center lg:text-left">
+                                    <p class="text-2xl sm:text-4xl font-black text-white font-heading">15+</p>
+                                    <p class="text-xs text-gray-400 font-medium uppercase tracking-wider">Pro Trainers</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-5 relative">
+                            <div class="relative mx-auto max-w-md lg:max-w-none">
+                                <div class="absolute -inset-1 bg-gradient-to-r from-brand-orange to-amber-600 rounded-3xl blur opacity-30"></div>
+                                <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80" alt="Fitzone Mumbai Gym Athlete" class="relative rounded-3xl object-cover w-full h-[450px] shadow-2xl border border-brand-border">
+                                
+                                <div class="absolute -bottom-6 -left-6 bg-brand-card/95 border border-brand-border p-4 rounded-2xl shadow-xl flex items-center gap-4 backdrop-blur-md">
+                                    <div class="w-12 h-12 bg-emerald-500/10 text-emerald-500 rounded-xl flex items-center justify-center text-xl font-bold">
+                                        <i class="fa-solid fa-shield-halved"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold text-white">100% Certified Facility</p>
+                                        <p class="text-xs text-gray-400">Santacruz West's Top Rated Gym</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INTRODUCTION SECTION -->
+            <div class="py-16 bg-brand-dark">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="bg-brand-card border border-brand-border rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <span class="text-brand-orange font-bold text-xs uppercase tracking-widest block mb-2">Welcome to Fitzone</span>
+                                <h2 class="text-3xl sm:text-4xl font-black text-white uppercase leading-tight mb-4">
+                                    WHERE MUMBAI COMES TO TRANSFORM
+                                </h2>
+                                <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-4">
+                                    Fitzone Fitness Club is Santacruz West’s iconic workout hub designed for fitness enthusiasts aged 16 and above. From heavy bodybuilding power-racks to high-octane cardio sessions and calming yoga classes, we combine cutting-edge infrastructure with personal expert guidance.
+                                </p>
+                                <ul class="space-y-2 text-sm text-gray-400 mb-6">
+                                    <li class="flex items-center gap-2">
+                                        <i class="fa-solid fa-circle-check text-brand-orange"></i> Fully Air-Conditioned 10,000 sq. ft. Facility
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i class="fa-solid fa-circle-check text-brand-orange"></i> International Standard Equipment & Free Weights
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i class="fa-solid fa-circle-check text-brand-orange"></i> Separate Male & Female Locker Rooms + Steam Bath
+                                    </li>
+                                </ul>
+                                <button onclick="navigateTo('about')" class="inline-flex items-center gap-2 text-brand-orange font-bold text-sm uppercase tracking-wider hover:underline">
+                                    Read Our Full Story <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=600&q=80" alt="Gym interior" class="rounded-2xl w-full h-44 object-cover">
+                                <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=600&q=80" alt="Workout zone" class="rounded-2xl w-full h-44 object-cover mt-6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FACILITIES HIGHLIGHTS -->
+            <div class="py-16 bg-brand-surface/40 border-y border-brand-border">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-2xl mx-auto mb-12">
+                        <span class="text-brand-orange font-bold text-xs uppercase tracking-widest">World Class Facilities</span>
+                        <h2 class="text-3xl sm:text-5xl font-black text-white uppercase mt-1">EVERYTHING YOU NEED TO SUCCEED</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="bg-brand-card border border-brand-border rounded-2xl p-6 card-hover">
+                            <div class="w-14 h-14 bg-brand-orange/10 text-brand-orange rounded-xl flex items-center justify-center text-2xl mb-4">
+                                <i class="fa-solid fa-dumbbell"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 uppercase">Strength Zone</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed">
+                                Plate-loaded machines, Olympic power racks, dumbells up to 50kg for intense muscle hypertrophy.
+                            </p>
+                        </div>
+                        <div class="bg-brand-card border border-brand-border rounded-2xl p-6 card-hover">
+                            <div class="w-14 h-14 bg-brand-orange/10 text-brand-orange rounded-xl flex items-center justify-center text-2xl mb-4">
+                                <i class="fa-solid fa-person-running"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 uppercase">Cardio Studio</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed">
+                                Commercial treadmills, ellipticals, spin bikes, and stairmasters equipped with heart monitors.
+                            </p>
+                        </div>
+                        <div class="bg-brand-card border border-brand-border rounded-2xl p-6 card-hover">
+                            <div class="w-14 h-14 bg-brand-orange/10 text-brand-orange rounded-xl flex items-center justify-center text-2xl mb-4">
+                                <i class="fa-solid fa-child-reaching"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 uppercase">CrossFit & HIIT</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed">
+                                Dedicated functional turf, battle ropes, kettlebells, plyo boxes, and slam balls for agility.
+                            </p>
+                        </div>
+                        <div class="bg-brand-card border border-brand-border rounded-2xl p-6 card-hover">
+                            <div class="w-14 h-14 bg-brand-orange/10 text-brand-orange rounded-xl flex items-center justify-center text-2xl mb-4">
+                                <i class="fa-solid fa-hot-tub-person"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 uppercase">Steam & Lockers</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed">
+                                Hygienic steam shower rooms, personal key lockers, and clean changing lounges.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HOME MEMBERSHIP PREVIEW -->
+            <div class="py-20 bg-brand-dark">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                        <div>
+                            <span class="text-brand-orange font-bold text-xs uppercase tracking-widest">Pricing Plans</span>
+                            <h2 class="text-3xl sm:text-5xl font-black text-white uppercase mt-1">AFFORDABLE FITNESS PLANS</h2>
+                        </div>
+                        <button onclick="navigateTo('membership')" class="mt-4 md:mt-0 text-brand-orange font-bold text-sm uppercase tracking-wider hover:underline flex items-center gap-2">
+                            View Full Details <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- 3 PLANS CARDS -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Monthly Plan -->
+                        <div class="bg-brand-card border border-brand-border rounded-3xl p-8 card-hover flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Flexible Plan</span>
+                                <h3 class="text-2xl font-bold text-white mt-1 uppercase">Monthly Plan</h3>
+                                <div class="my-6">
+                                    <span class="text-4xl font-black text-white font-heading">₹999</span>
+                                    <span class="text-gray-400 text-sm">/ month</span>
+                                </div>
+                                <ul class="space-y-3 text-xs text-gray-300 mb-8">
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Full Gym Floor Access</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Cardio & Weight Section</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Locker Facility Access</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> General Trainer Support</li>
+                                </ul>
+                            </div>
+                            <button onclick="openModal('Monthly Plan - Rs. 999')" class="w-full bg-brand-surface hover:bg-brand-orange hover:text-white border border-brand-border text-white font-bold py-3.5 rounded-xl uppercase tracking-wider text-xs transition-all">
+                                Join Now - ₹999
+                            </button>
+                        </div>
+
+                        <!-- Quarterly Plan -->
+                        <div class="bg-brand-card border-2 border-brand-orange rounded-3xl p-8 card-hover relative flex flex-col justify-between shadow-2xl scale-105 my-2 md:my-0">
+                            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-brand-orange text-white text-[10px] font-black uppercase tracking-widest py-1 px-4 rounded-full shadow-md">
+                                Most Popular Choice
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-brand-orange uppercase tracking-widest">Best Balance</span>
+                                <h3 class="text-2xl font-bold text-white mt-1 uppercase">Quarterly Plan</h3>
+                                <div class="my-6">
+                                    <span class="text-4xl font-black text-white font-heading">₹2,499</span>
+                                    <span class="text-gray-400 text-sm">/ 3 months</span>
+                                </div>
+                                <ul class="space-y-3 text-xs text-gray-300 mb-8">
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> All Monthly Plan Benefits</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> 1 Free Personal Training Session</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Free Basic Diet Consultation</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Steam Bath Access (1x/week)</li>
+                                </ul>
+                            </div>
+                            <button onclick="openModal('Quarterly Plan - Rs. 2499')" class="w-full glow-btn bg-brand-orange hover:bg-brand-darkorange text-white font-black py-4 rounded-xl uppercase tracking-wider text-xs">
+                                Join Now - ₹2,499
+                            </button>
+                        </div>
+
+                        <!-- Yearly Plan -->
+                        <div class="bg-brand-card border border-brand-border rounded-3xl p-8 card-hover flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Maximum Savings</span>
+                                <h3 class="text-2xl font-bold text-white mt-1 uppercase">Yearly Plan</h3>
+                                <div class="my-6">
+                                    <span class="text-4xl font-black text-white font-heading">₹8,999</span>
+                                    <span class="text-gray-400 text-sm">/ 12 months</span>
+                                </div>
+                                <ul class="space-y-3 text-xs text-gray-300 mb-8">
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> All Quarterly Benefits</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Unlimited Steam Room Access</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Personalized Workout Chart</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Locker Room Permanent Slot</li>
+                                </ul>
+                            </div>
+                            <button onclick="openModal('Yearly Plan - Rs. 8999')" class="w-full bg-brand-surface hover:bg-brand-orange hover:text-white border border-brand-border text-white font-bold py-3.5 rounded-xl uppercase tracking-wider text-xs transition-all">
+                                Join Now - ₹8,999
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= PAGE 2: ABOUT US PAGE ================= -->
+        <section id="page-about" class="page-section">
+            <!-- Header Banner -->
+            <div class="bg-brand-card py-16 border-b border-brand-border text-center">
+                <div class="max-w-4xl mx-auto px-4">
+                    <span class="text-brand-orange font-bold text-xs uppercase tracking-widest">20 Years of Transformation</span>
+                    <h1 class="text-4xl sm:text-6xl font-black text-white uppercase mt-1">ABOUT FITZONE FITNESS CLUB</h1>
+                    <p class="text-gray-400 text-sm sm:text-base mt-3 max-w-xl mx-auto">
+                        From a small 800 sq. ft. room in Santacruz West to Mumbai’s most trusted fitness landmark.
+                    </p>
+                </div>
+            </div>
+
+            <!-- OUR STORY & HISTORY -->
+            <div class="py-16 bg-brand-dark">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <span class="bg-brand-orange/20 text-brand-orange text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Our History</span>
+                            <h2 class="text-3xl sm:text-4xl font-black text-white uppercase mt-3 mb-6">
+                                STARTED FROM ZERO 20 YEARS AGO
+                            </h2>
+                            <div class="space-y-4 text-gray-300 text-sm sm:text-base leading-relaxed">
+                                <p>
+                                    In the year 2004, Fitzone Fitness Club started as a humble dream in Santacruz West, Mumbai. Operating out of a modest 800 sq. ft. room with basic iron plates and relentless passion, our founders set out with a simple goal: to make fitness genuine, science-backed, and accessible.
+                                </p>
+                                <p>
+                                    Through hard work, pure member satisfaction, and continuous investment in world-class equipment, Fitzone grew organically. Today, 20 years later, we stand proud as a premier 10,000+ sq. ft. multi-floor fitness destination equipped with high-tech machinery, dedicated HIIT zones, and certified personal trainers.
+                                </p>
+                                <p>
+                                    We have helped over 5,000+ residents of Santacruz, Bandra, and Mumbai build strength, lose fat, overcome health bottlenecks, and maintain long-term vitality for ages 16+.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="relative">
+                            <div class="grid grid-cols-2 gap-4">
+                                <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80" alt="Gym historic growth" class="rounded-2xl w-full h-64 object-cover border border-brand-border">
+                                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Modern equipment" class="rounded-2xl w-full h-64 object-cover border border-brand-border mt-8">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OUR MISSION & VISION -->
+            <div class="py-16 bg-brand-surface/30 border-y border-brand-border">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-brand-card p-8 rounded-3xl border border-brand-border">
+                            <div class="w-12 h-12 bg-brand-orange text-white rounded-xl flex items-center justify-center text-2xl font-bold mb-4">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white uppercase mb-3">OUR MISSION</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                Our mission is to keep people healthy, physically resilient, and mentally empowered. We eliminate fitness gimmicks and deliver practical, result-driven workout routines and dietary guidance to help every teenager (16+) and adult achieve their dream fitness level safely.
+                            </p>
+                        </div>
+
+                        <div class="bg-brand-card p-8 rounded-3xl border border-brand-border">
+                            <div class="w-12 h-12 bg-brand-orange text-white rounded-xl flex items-center justify-center text-2xl font-bold mb-4">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white uppercase mb-3">OUR VISION</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                To remain Mumbai’s highest-rated community-first fitness club that fosters discipline, positivity, and athletic excellence. We strive to create an inclusive environment where beginners and elite athletes train side-by-side.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHILOSOPHY & TRAINER CALLOUT -->
+            <div class="py-16 bg-brand-dark text-center">
+                <div class="max-w-3xl mx-auto px-4">
+                    <h2 class="text-3xl font-black text-white uppercase">GUIDED BY EXPERT MENTORS</h2>
+                    <p class="text-gray-400 text-sm mt-3 mb-8">
+                        Our trainers are certified professionals who personalize workouts according to your age, goal, and body mechanics.
+                    </p>
+                    <button onclick="navigateTo('trainers')" class="bg-brand-orange hover:bg-brand-darkorange text-white font-bold px-8 py-3.5 rounded-xl uppercase text-xs tracking-wider">
+                        Meet Our Certified Trainers
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= PAGE 3: MEMBERSHIP PLANS PAGE ================= -->
+        <section id="page-membership" class="page-section">
+            <div class="bg-brand-card py-16 border-b border-brand-border text-center">
+                <div class="max-w-4xl mx-auto px-4">
+                    <span class="text-brand-orange font-bold text-xs uppercase tracking-widest">Transparent Pricing</span>
+                    <h1 class="text-4xl sm:text-6xl font-black text-white uppercase mt-1">MEMBERSHIP PLANS</h1>
+                    <p class="text-gray-400 text-sm sm:text-base mt-3 max-w-xl mx-auto">
+                        No hidden charges. Choose a plan that suits your schedule and fitness goals in Santacruz West.
+                    </p>
+                </div>
+            </div>
+
+            <div class="py-20 bg-brand-dark">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <!-- PRICING TIERS GRID -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                        
+                        <!-- Plan 1: Monthly (₹999) -->
+                        <div class="bg-brand-card border border-brand-border rounded-3xl p-8 card-hover flex flex-col justify-between">
+                            <div>
+                                <span class="bg-brand-surface text-gray-300 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Monthly Pass</span>
+                                <h2 class="text-3xl font-bold text-white mt-4 uppercase">Monthly Plan</h2>
+                                <p class="text-xs text-gray-400 mt-1">Ideal for short-term fitness goals & trial.</p>
+                                
+                                <div class="my-6 border-y border-brand-border py-4">
+                                    <div class="flex items-baseline gap-1">
+                                        <span class="text-4xl sm:text-5xl font-black text-white font-heading">Rs. 999</span>
+                                        <span class="text-gray-400 text-xs">/ per month</span>
+                                    </div>
+                                    <p class="text-[11px] text-brand-orange font-semibold mt-1">Billed monthly</p>
+                                </div>
+
+                                <h3 class="text-xs font-bold text-gray-400 uppercase mb-3 tracking-wider">Plan Highlights:</h3>
+                                <ul class="space-y-3 text-xs text-gray-300 mb-8">
+                                    <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brand-orange"></i> Full access to gym strength area</li>
+                                    <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brand-orange"></i> High-intensity cardio floor</li>
+                                    <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brand-orange"></i> Standard locker & shower access</li>
+                                    <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brand-orange"></i> On-floor trainer assistance</li>
+                                    <li class="flex items-center gap-2.5 text-gray-500"><i class="fa-solid fa-circle-xmark"></i> Personal diet consultation</li>
+                                </ul>
+                            </div>
+
+                            <button onclick="openModal('Monthly Plan - Rs. 999')" class="w-full bg-brand-surface hover:bg-brand-orange hover:text-white border border-brand-border text-white font-bold py-4 rounded-xl uppercase tracking-wider text-xs transition-all">
+                                Join Now - Rs. 999
+                            </button>
+                        </div>
+
+                        <!-- Plan 2: Quarterly (₹2,499) -->
+                        <div class="bg-brand-card border-2 border-brand-orange rounded-3xl p-8 card-hover relative flex flex-col justify-between shadow-2xl scale-105">
+                            <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-orange text-white text-xs font-black uppercase tracking-widest py-1.5 px-6 rounded-full shadow-lg">
+                                POPULAR PLAN
+                            </div>
+
+                            <div>
+                                <span class="bg-brand-orange/20 text-brand-orange text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Quarterly Pass</span>
+                                <h2 class="text-3xl font-bold text-white mt-4 uppercase">Quarterly Plan</h2>
+                                <p class="text-xs text-gray-400 mt-1">Best commitment for visible results.</p>
+                                
+                                <div class="my-6 border-y border-brand-border py-4">
+                                    <div class="flex items-baseline gap-1">
+                                        <span class="text-4xl sm:text-5xl font-black text-brand-orange font-heading">Rs. 2,499</span>
+                                        <span class="text-gray-400 text-xs">/ 3 months</span>
+                                    </div>
+                                    <p class="text-[11px] text-emerald-400 font-semibold mt-1">Save ₹498 compared to monthly</p>
+                                </div>
+
+                                <h3 class="text-xs font-bold text-gray-400 uppercase mb-3 tracking-wider">Plan Highlights:</h3>
+                                <ul class="space-y-3 text-xs text-gray-300 mb-8">
+                                    <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brand-orange"></i> All Monthly Plan privileges</li>
+                                    <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brand-orange"></i> 1 Free Personal Training Intro Session</li>
+                                    <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brand-orange"></i> Custom Diet & Nutrition Chart</li>
+                                    <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brand-orange"></i> Steam bath session (Weekly)</li>
+                                    <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brand-orange"></i> Body Composition Analysis</li>
+                                </ul>
+                            </div>
+
+                            <button onclick="openModal('Quarterly Plan - Rs. 2499')" class="w-full glow-btn bg-brand-orange hover:bg-brand-darkorange text-white font-black py-4 rounded-xl uppercase tracking-wider text-xs">
+                                Join Now - Rs. 2,499
+                            </button>
+                        </div>
+
+                        <!-- Plan 3: Yearly (₹8,999) -->
+                        <div class="bg-brand-card border border-brand-border rounded-3xl p-8 card-hover flex flex-col justify-between">
+                            <div>
+                                <span class="bg-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">BEST VALUE</span>
+                                <h2 class="text-3xl font-bold text-white mt-4 uppercase">Yearly Plan</h2>
+                                <p class="text-xs text-gray-400 mt-1">Full year of peak athletic performance.</p>
+                                
+                                <div class="my-6 border-y border-brand-border py-4">
+                                    <div class="flex items-baseline gap-1">
+                                        <span class="text-4xl sm:text-5xl font-black text-white font-heading">Rs. 8,999</span>
+                                        <span class="text-gray-400 text-xs">/ year</span>
+                                    </div>
+                                    <p class="text-[11px] text-emerald-400 font-semibold mt-1">Save ₹2,989 annually</p>
+                                </div>
+
+                                <h3 class="text-xs font-bold text-gray-400 uppercase mb-3 tracking-wider">Plan Highlights:</h3>
+                                <ul class="space-y-3 text-xs text-gray-300 mb-8">
+                                    <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brand-orange"></i> Unlimited 365 Days Gym Floor Access</li>
+                                    <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brand-orange"></i> Unlimited Steam Room & Sauna</li>
+                                    <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brand-orange"></i> Dedicated Personal Fitness Mentor</li>
+                                    <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brand-orange"></i> Free Access to Group Yoga Sessions</li>
+                                    <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brand-orange"></i> Reserved Personal Locker Space</li>
+                                </ul>
+                            </div>
+
+                            <button onclick="openModal('Yearly Plan - Rs. 8999')" class="w-full bg-brand-surface hover:bg-brand-orange hover:text-white border border-brand-border text-white font-bold py-4 rounded-xl uppercase tracking-wider text-xs transition-all">
+                                Join Now - Rs. 8,999
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= PAGE 4: OUR TRAINERS PAGE ================= -->
+        <section id="page-trainers" class="page-section">
+            <div class="bg-brand-card py-16 border-b border-brand-border text-center">
+                <div class="max-w-4xl mx-auto px-4">
+                    <span class="text-brand-orange font-bold text-xs uppercase tracking-widest">Expert Guidance</span>
+                    <h1 class="text-4xl sm:text-6xl font-black text-white uppercase mt-1">MEET OUR CERTIFIED TRAINERS</h1>
+                    <p class="text-gray-400 text-sm sm:text-base mt-3 max-w-xl mx-auto">
+                        Dedicated fitness experts with specialized skills to mentor your workout journey in Santacruz West.
+                    </p>
+                </div>
+            </div>
+
+            <div class="py-16 bg-brand-dark">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        
+                        <!-- Trainer 1: Ram -->
+                        <div class="bg-brand-card border border-brand-border rounded-3xl overflow-hidden card-hover flex flex-col justify-between">
+                            <div class="relative h-72">
+                                <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=600&q=80" alt="Ram - Strength & Conditioning Trainer" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent"></div>
+                                <span class="absolute top-4 right-4 bg-brand-orange text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-md">Male Trainer</span>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-white uppercase">RAM</h3>
+                                <p class="text-brand-orange font-semibold text-xs mb-3">Strength & Hypertrophy Specialist</p>
+                                <p class="text-gray-400 text-xs leading-relaxed mb-4">
+                                    Ram specializes in powerlifting, heavy weight training, and maximum muscle hypertrophy with strict posture alignment.
+                                </p>
+                                <div class="bg-brand-surface p-3 rounded-xl border border-brand-border">
+                                    <p class="text-[10px] font-bold text-gray-400 uppercase">Special Skill</p>
+                                    <p class="text-xs font-bold text-white flex items-center gap-1.5 mt-0.5">
+                                        <i class="fa-solid fa-dumbbell text-brand-orange"></i> Heavy Compound Lifting & Muscle Building
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Trainer 2: Arjun -->
+                        <div class="bg-brand-card border border-brand-border rounded-3xl overflow-hidden card-hover flex flex-col justify-between">
+                            <div class="relative h-72">
+                                <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=600&q=80" alt="Arjun - CrossFit & HIIT Coach" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent"></div>
+                                <span class="absolute top-4 right-4 bg-brand-orange text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-md">Male Trainer</span>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-white uppercase">ARJUN</h3>
+                                <p class="text-brand-orange font-semibold text-xs mb-3">CrossFit & HIIT Fat Loss Coach</p>
+                                <p class="text-gray-400 text-xs leading-relaxed mb-4">
+                                    Arjun designs rapid weight loss, stamina building, and functional metabolic conditioning routines.
+                                </p>
+                                <div class="bg-brand-surface p-3 rounded-xl border border-brand-border">
+                                    <p class="text-[10px] font-bold text-gray-400 uppercase">Special Skill</p>
+                                    <p class="text-xs font-bold text-white flex items-center gap-1.5 mt-0.5">
+                                        <i class="fa-solid fa-stopwatch text-brand-orange"></i> High Intensity Fat Burn & Endurance
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Trainer 3: Komal -->
+                        <div class="bg-brand-card border border-brand-border rounded-3xl overflow-hidden card-hover flex flex-col justify-between">
+                            <div class="relative h-72">
+                                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80" alt="Komal - Functional Fitness Coach" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent"></div>
+                                <span class="absolute top-4 right-4 bg-brand-orange text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-md">Female Trainer</span>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-white uppercase">KOMAL</h3>
+                                <p class="text-brand-orange font-semibold text-xs mb-3">Functional Core & Mobility Coach</p>
+                                <p class="text-gray-400 text-xs leading-relaxed mb-4">
+                                    Komal helps members achieve athletic balance, core strengthening, injury prevention, and body toning.
+                                </p>
+                                <div class="bg-brand-surface p-3 rounded-xl border border-brand-border">
+                                    <p class="text-[10px] font-bold text-gray-400 uppercase">Special Skill</p>
+                                    <p class="text-xs font-bold text-white flex items-center gap-1.5 mt-0.5">
+                                        <i class="fa-solid fa-person-rays text-brand-orange"></i> Core Conditioning & Posture Correction
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Trainer 4: Malti -->
+                        <div class="bg-brand-card border border-brand-border rounded-3xl overflow-hidden card-hover flex flex-col justify-between">
+                            <div class="relative h-72">
+                                <img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?auto=format&fit=crop&w=600&q=80" alt="Malti - Yoga & Meditation Expert" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent"></div>
+                                <span class="absolute top-4 right-4 bg-brand-orange text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-md">Female Trainer</span>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-white uppercase">MALTI</h3>
+                                <p class="text-brand-orange font-semibold text-xs mb-3">Yoga & Meditation Expert</p>
+                                <p class="text-gray-400 text-xs leading-relaxed mb-4">
+                                    Malti brings 10+ years of yogic wisdom for stress reduction, flexibility, breathwork, and holistic wellness.
+                                </p>
+                                <div class="bg-brand-surface p-3 rounded-xl border border-brand-border">
+                                    <p class="text-[10px] font-bold text-gray-400 uppercase">Special Skill</p>
+                                    <p class="text-xs font-bold text-white flex items-center gap-1.5 mt-0.5">
+                                        <i class="fa-solid fa-spa text-brand-orange"></i> Yoga Asanas, Pranayama & Meditation
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= PAGE 5: GALLERY PAGE ================= -->
+        <section id="page-gallery" class="page-section">
+            <div class="bg-brand-card py-16 border-b border-brand-border text-center">
+                <div class="max-w-4xl mx-auto px-4">
+                    <span class="text-brand-orange font-bold text-xs uppercase tracking-widest">Visual Tour</span>
+                    <h1 class="text-4xl sm:text-6xl font-black text-white uppercase mt-1">FITZONE GYM GALLERY</h1>
+                    <p class="text-gray-400 text-sm sm:text-base mt-3 max-w-xl mx-auto">
+                        Take a look inside our Santacruz West premises, workout sections, and active training sessions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="py-16 bg-brand-dark">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    
+                    <!-- FILTER BUTTONS -->
+                    <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+                        <button onclick="filterGallery('all')" class="gallery-filter-btn px-5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-brand-orange text-white transition-all" data-filter="all">All Photos</button>
+                        <button onclick="filterGallery('equipment')" class="gallery-filter-btn px-5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-brand-surface text-gray-300 hover:text-white border border-brand-border transition-all" data-filter="equipment">Gym Equipment</button>
+                        <button onclick="filterGallery('workout')" class="gallery-filter-btn px-5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-brand-surface text-gray-300 hover:text-white border border-brand-border transition-all" data-filter="workout">Workout Area</button>
+                        <button onclick="filterGallery('sessions')" class="gallery-filter-btn px-5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-brand-surface text-gray-300 hover:text-white border border-brand-border transition-all" data-filter="sessions">Training Sessions</button>
+                    </div>
+
+                    <!-- GALLERY IMAGES GRID -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryGrid">
+                        
+                        <!-- Item 1 -->
+                        <div class="gallery-item equipment group relative rounded-2xl overflow-hidden cursor-pointer border border-brand-border h-64" onclick="openLightbox('https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1200&q=80', 'Heavy Dumbbell Station')">
+                            <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=600&q=80" alt="Gym Equipment" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                                <span class="text-brand-orange text-xs font-bold uppercase">Gym Equipment</span>
+                                <h3 class="text-white text-lg font-bold">Heavy Dumbbell & Bench Station</h3>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="gallery-item workout group relative rounded-2xl overflow-hidden cursor-pointer border border-brand-border h-64" onclick="openLightbox('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80', 'Main Workout Floor')">
+                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Workout Area" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                                <span class="text-brand-orange text-xs font-bold uppercase">Workout Area</span>
+                                <h3 class="text-white text-lg font-bold">Spacious 10,000 sq. ft. Main Floor</h3>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="gallery-item sessions group relative rounded-2xl overflow-hidden cursor-pointer border border-brand-border h-64" onclick="openLightbox('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=80', 'Personal Training Session')">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80" alt="Training Session" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                                <span class="text-brand-orange text-xs font-bold uppercase">Training Sessions</span>
+                                <h3 class="text-white text-lg font-bold">1-on-1 Personal Coaching</h3>
+                            </div>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="gallery-item equipment group relative rounded-2xl overflow-hidden cursor-pointer border border-brand-border h-64" onclick="openLightbox('https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1200&q=80', 'Cardio Treadmills')">
+                            <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80" alt="Cardio Equipment" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                                <span class="text-brand-orange text-xs font-bold uppercase">Gym Equipment</span>
+                                <h3 class="text-white text-lg font-bold">Pro Cardio Treadmills Studio</h3>
+                            </div>
+                        </div>
+
+                        <!-- Item 5 -->
+                        <div class="gallery-item workout group relative rounded-2xl overflow-hidden cursor-pointer border border-brand-border h-64" onclick="openLightbox('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1200&q=80', 'Functional Turf & CrossFit Zone')">
+                            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80" alt="CrossFit Zone" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                                <span class="text-brand-orange text-xs font-bold uppercase">Workout Area</span>
+                                <h3 class="text-white text-lg font-bold">Functional Turf & CrossFit Zone</h3>
+                            </div>
+                        </div>
+
+                        <!-- Item 6 -->
+                        <div class="gallery-item sessions group relative rounded-2xl overflow-hidden cursor-pointer border border-brand-border h-64" onclick="openLightbox('https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1200&q=80', 'Yoga & Meditation Group Class')">
+                            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80" alt="Yoga Session" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                                <span class="text-brand-orange text-xs font-bold uppercase">Training Sessions</span>
+                                <h3 class="text-white text-lg font-bold">Guided Yoga & Mindfulness</h3>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= PAGE 6: CONTACT US PAGE ================= -->
+        <section id="page-contact" class="page-section">
+            <div class="bg-brand-card py-16 border-b border-brand-border text-center">
+                <div class="max-w-4xl mx-auto px-4">
+                    <span class="text-brand-orange font-bold text-xs uppercase tracking-widest">Get In Touch</span>
+                    <h1 class="text-4xl sm:text-6xl font-black text-white uppercase mt-1">CONTACT FITZONE</h1>
+                    <p class="text-gray-400 text-sm sm:text-base mt-3 max-w-xl mx-auto">
+                        Visit our gym in Santacruz West, call us, or send an inquiry online.
+                    </p>
+                </div>
+            </div>
+
+            <div class="py-16 bg-brand-dark">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                        
+                        <!-- CONTACT INFO & DETAILS -->
+                        <div class="lg:col-span-5 space-y-6">
+                            
+                            <!-- Address Card -->
+                            <div class="bg-brand-card border border-brand-border p-6 rounded-2xl flex items-start gap-4">
+                                <div class="w-12 h-12 bg-brand-orange/10 text-brand-orange rounded-xl flex items-center justify-center text-xl shrink-0 mt-1">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white uppercase">Our Address</h3>
+                                    <p class="text-gray-300 text-xs sm:text-sm mt-1 leading-relaxed">
+                                        Fitzone Fitness Club, 2nd & 3rd Floor, SV Road / Linking Road Junction, Santacruz West, Mumbai, Maharashtra 400054.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Phone & Email Card -->
+                            <div class="bg-brand-card border border-brand-border p-6 rounded-2xl flex items-start gap-4">
+                                <div class="w-12 h-12 bg-brand-orange/10 text-brand-orange rounded-xl flex items-center justify-center text-xl shrink-0 mt-1">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white uppercase">Phone & Email</h3>
+                                    <p class="text-gray-300 text-xs sm:text-sm mt-1">
+                                        Mobile: <a href="tel:0000000000" class="text-brand-orange font-bold hover:underline">0000000000</a>
+                                    </p>
+                                    <p class="text-gray-300 text-xs sm:text-sm mt-0.5">
+                                        Email: <a href="mailto:fitzonefitnessclub@gmail.com" class="text-brand-orange font-bold hover:underline">fitzonefitnessclub@gmail.com</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Operating Hours -->
+                            <div class="bg-brand-card border border-brand-border p-6 rounded-2xl flex items-start gap-4">
+                                <div class="w-12 h-12 bg-brand-orange/10 text-brand-orange rounded-xl flex items-center justify-center text-xl shrink-0 mt-1">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white uppercase">Working Hours</h3>
+                                    <p class="text-gray-300 text-xs sm:text-sm mt-1">
+                                        Monday – Saturday: <span class="text-white font-semibold">5:30 AM – 11:00 PM</span>
+                                    </p>
+                                    <p class="text-gray-300 text-xs sm:text-sm mt-0.5">
+                                        Sunday: <span class="text-white font-semibold">7:00 AM – 9:00 PM</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- INQUIRY FORM -->
+                        <div class="lg:col-span-7">
+                            <div class="bg-brand-card border border-brand-border p-8 sm:p-10 rounded-3xl shadow-xl">
+                                <h3 class="text-2xl font-bold text-white uppercase mb-2">SEND AN INQUIRY</h3>
+                                <p class="text-gray-400 text-xs mb-6">Have a question regarding personal training or memberships? Drop us a message.</p>
+
+                                <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-4">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <div>
+                                            <label class="block text-xs font-bold text-gray-300 uppercase mb-1">Full Name</label>
+                                            <input type="text" required placeholder="e.g. Rahul Sharma" class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange">
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-bold text-gray-300 uppercase mb-1">Email Address</label>
+                                            <input type="email" required placeholder="name@domain.com" class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold text-gray-300 uppercase mb-1">Subject</label>
+                                        <input type="text" required placeholder="Membership Inquiry / Trial Session" class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold text-gray-300 uppercase mb-1">Message</label>
+                                        <textarea rows="4" required placeholder="Type your message here..." class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange"></textarea>
+                                    </div>
+                                    <button type="submit" class="w-full glow-btn bg-brand-orange hover:bg-brand-darkorange text-white font-black py-4 rounded-xl uppercase tracking-wider text-xs">
+                                        Send Message <i class="fa-solid fa-paper-plane ml-2"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- EMBEDDED GOOGLE MAP -->
+                    <div class="mt-12 rounded-3xl overflow-hidden border border-brand-border shadow-2xl h-80">
+                        <iframe 
+                            title="Fitzone Gym Location Santacruz West Mumbai"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.793798579979!2d72.8361!3d19.0822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c90b6771e89b%3A0x88f28f09d81640fa!2sSantacruz%20West%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; filter: grayscale(80%) invert(90%) contrast(120%);" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-card border-t border-brand-border text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                
+                <!-- Col 1: Brand Info -->
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-brand-orange text-white flex items-center justify-center rounded-lg font-black text-base">
+                            <i class="fa-solid fa-dumbbell"></i>
+                        </div>
+                        <span class="text-xl font-black text-white tracking-wider font-heading">FITZONE<span class="text-brand-orange">.</span></span>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Santacruz West’s leading fitness destination for strength, fat loss, yoga, and holistic health for ages 16 and above.
+                    </p>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Quick Links</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><button onclick="navigateTo('home')" class="hover:text-brand-orange">Home</button></li>
+                        <li><button onclick="navigateTo('about')" class="hover:text-brand-orange">About Our Gym</button></li>
+                        <li><button onclick="navigateTo('membership')" class="hover:text-brand-orange">Membership Plans</button></li>
+                        <li><button onclick="navigateTo('trainers')" class="hover:text-brand-orange">Certified Trainers</button></li>
+                        <li><button onclick="navigateTo('gallery')" class="hover:text-brand-orange">Gym Gallery</button></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Contact Summary -->
+                <div>
+                    <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Santacruz West Branch</h4>
+                    <p class="text-xs text-gray-400">Santacruz West, Mumbai, MH 400054</p>
+                    <p class="text-xs text-gray-400 mt-2">Call: <span class="text-white">0000000000</span></p>
+                    <p class="text-xs text-gray-400 mt-1">Email: <span class="text-white">fitzonefitnessclub@gmail.com</span></p>
+                </div>
+
+                <!-- Col 4: Social & Target Audience -->
+                <div>
+                    <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Target Audience</h4>
+                    <span class="bg-brand-surface text-brand-orange text-xs font-bold px-3 py-1.5 rounded-lg border border-brand-border inline-block mb-3">
+                        Age Group: 16+ Years Only
+                    </span>
+                    <div class="flex items-center gap-3">
+                        <a href="#" aria-label="Facebook" class="w-8 h-8 bg-brand-surface hover:bg-brand-orange text-white rounded-lg flex items-center justify-center transition-colors text-xs"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram" class="w-8 h-8 bg-brand-surface hover:bg-brand-orange text-white rounded-lg flex items-center justify-center transition-colors text-xs"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube" class="w-8 h-8 bg-brand-surface hover:bg-brand-orange text-white rounded-lg flex items-center justify-center transition-colors text-xs"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" aria-label="WhatsApp" class="w-8 h-8 bg-brand-surface hover:bg-brand-orange text-white rounded-lg flex items-center justify-center transition-colors text-xs"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-brand-border/60 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500">
+                <p>&copy; 2026 Fitzone Fitness Club. All Rights Reserved. Santacruz West, Mumbai.</p>
+                <p class="mt-2 sm:mt-0">Designed for Peak Fitness Performance</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ================= MODAL 1: REGISTRATION / JOIN NOW MODAL ================= -->
+    <div id="joinModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity duration-300">
+        <div class="bg-brand-card border border-brand-border w-full max-w-lg rounded-3xl p-6 sm:p-8 relative shadow-2xl overflow-hidden">
+            <!-- Close Button -->
+            <button onclick="closeModal()" aria-label="Close modal" class="absolute top-5 right-5 text-gray-400 hover:text-white w-8 h-8 rounded-full bg-brand-surface flex items-center justify-center text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- FORM HEADER -->
+            <div id="modalFormContainer">
+                <div class="text-center mb-6">
+                    <div class="w-12 h-12 bg-brand-orange/20 text-brand-orange rounded-2xl flex items-center justify-center text-2xl mx-auto mb-2">
+                        <i class="fa-solid fa-id-card"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-white uppercase font-heading">FITZONE REGISTRATION</h3>
+                    <p class="text-xs text-gray-400">Santacruz West Branch (Age Limit: 16+ Only)</p>
+                </div>
+
+                <form id="registrationForm" onsubmit="handleRegistrationSubmit(event)" class="space-y-4">
+                    <!-- Full Name -->
+                    <div>
+                        <label class="block text-xs font-bold text-gray-300 uppercase mb-1">Full Name *</label>
+                        <input type="text" id="regName" required placeholder="e.g. Vikram Sharma" class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange">
+                    </div>
+
+                    <!-- Email & Mobile -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-300 uppercase mb-1">Email Address *</label>
+                            <input type="email" id="regEmail" required placeholder="name@domain.com" class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-300 uppercase mb-1">Mobile No. (10 Digits) *</label>
+                            <input type="tel" id="regPhone" required pattern="[0-9]{10}" placeholder="9876543210" class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange">
+                        </div>
+                    </div>
+
+                    <!-- Membership Plan Selector -->
+                    <div>
+                        <label class="block text-xs font-bold text-gray-300 uppercase mb-1">Selected Membership Plan *</label>
+                        <select id="regPlan" required class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-orange">
+                            <option value="Monthly Plan - Rs. 999">Monthly Plan - Rs. 999 / month</option>
+                            <option value="Quarterly Plan - Rs. 2499">Quarterly Plan - Rs. 2,499 / 3 months (Popular)</option>
+                            <option value="Yearly Plan - Rs. 8999">Yearly Plan - Rs. 8,999 / year (Best Savings)</option>
+                        </select>
+                    </div>
+
+                    <!-- Age Confirmation Checkbox -->
+                    <div class="flex items-center gap-2 pt-1">
+                        <input type="checkbox" id="regAgeCheck" required class="w-4 h-4 accent-brand-orange rounded cursor-pointer">
+                        <label for="regAgeCheck" class="text-xs text-gray-300 cursor-pointer">
+                            I confirm that I am <strong>16 years of age or older</strong>.
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="w-full glow-btn bg-brand-orange hover:bg-brand-darkorange text-white font-black py-4 rounded-xl uppercase tracking-wider text-xs mt-2">
+                        Complete Registration <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- SUCCESS CONFIRMATION SCREEN (Hidden by default) -->
+            <div id="modalSuccessContainer" class="hidden text-center py-6">
+                <div class="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 animate-bounce">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h3 class="text-2xl font-black text-white uppercase font-heading mb-2">WELCOME TO FITZONE!</h3>
+                <p class="text-gray-300 text-sm mb-4">
+                    Thank you <span id="confirmName" class="text-brand-orange font-bold"></span>! Your registration for <span id="confirmPlan" class="text-white font-semibold"></span> is successfully submitted.
+                </p>
+                <div class="bg-brand-surface p-4 rounded-2xl border border-brand-border text-left text-xs space-y-2 mb-6">
+                    <p class="text-gray-400"><strong>Next Step:</strong> Visit our Santacruz West branch with your ID proof to complete pass activation.</p>
+                    <p class="text-gray-400"><strong>Contact Helpline:</strong> 0000000000</p>
+                </div>
+                <button onclick="closeModal()" class="bg-brand-orange hover:bg-brand-darkorange text-white font-bold px-8 py-3 rounded-xl text-xs uppercase tracking-wider">
+                    Close Window
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ================= MODAL 2: LIGHTBOX PREVIEW MODAL ================= -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/90 backdrop-blur-md">
+        <button onclick="closeLightbox()" aria-label="Close image preview" class="absolute top-5 right-5 text-gray-300 hover:text-white text-3xl z-10">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="max-w-4xl w-full text-center">
+            <img id="lightboxImg" src="" alt="Gallery Preview" class="max-h-[80vh] mx-auto rounded-2xl object-contain shadow-2xl border border-brand-border">
+            <p id="lightboxCaption" class="text-white text-base font-bold mt-4 font-heading"></p>
+        </div>
+    </div>
+
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 hidden bg-brand-surface border border-brand-orange text-white px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3">
+        <i class="fa-solid fa-circle-check text-brand-orange text-xl"></i>
+        <span id="toastMsg" class="text-xs font-semibold"></span>
+    </div>
+
+
+    <!-- JAVASCRIPT LOGIC & ROUTING -->
+    <script>
+        // NAVIGATION & PAGE ROUTING
+        function navigateTo(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page-section');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Target page
+            const targetPage = document.getElementById('page-' + pageId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+
+            // Update Header Nav active styles
+            const navButtons = document.querySelectorAll('.nav-btn');
+            navButtons.forEach(btn => {
+                btn.classList.remove('text-brand-orange', 'font-bold');
+                btn.classList.add('text-gray-300');
+            });
+            const activeNav = document.getElementById('nav-' + pageId);
+            if (activeNav) {
+                activeNav.classList.add('text-brand-orange', 'font-bold');
+                activeNav.classList.remove('text-gray-300');
+            }
+
+            // Scroll to top of page smoothly
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // MOBILE MENU TOGGLE
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuIcon = document.getElementById('menuIcon');
+            
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // REGISTRATION MODAL LOGIC
+        function openModal(planName) {
+            const modal = document.getElementById('joinModal');
+            const select = document.getElementById('regPlan');
+            const formContainer = document.getElementById('modalFormContainer');
+            const successContainer = document.getElementById('modalSuccessContainer');
+
+            // Reset view state
+            formContainer.classList.remove('hidden');
+            successContainer.classList.add('hidden');
+
+            // Auto-select plan if passed
+            if (planName) {
+                for (let i = 0; i < select.options.length; i++) {
+                    if (select.options[i].value.toLowerCase().includes(planName.toLowerCase())) {
+                        select.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('joinModal').classList.add('hidden');
+        }
+
+        function handleRegistrationSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('regName').value;
+            const plan = document.getElementById('regPlan').value;
+
+            document.getElementById('confirmName').textContent = name;
+            document.getElementById('confirmPlan').textContent = plan;
+
+            document.getElementById('modalFormContainer').classList.add('hidden');
+            document.getElementById('modalSuccessContainer').classList.remove('hidden');
+
+            // Clear input fields
+            document.getElementById('registrationForm').reset();
+        }
+
+        // GALLERY FILTER LOGIC
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+
+            filterBtns.forEach(btn => {
+                if (btn.getAttribute('data-filter') === category) {
+                    btn.classList.add('bg-brand-orange', 'text-white');
+                    btn.classList.remove('bg-brand-surface', 'text-gray-300');
+                } else {
+                    btn.classList.remove('bg-brand-orange', 'text-white');
+                    btn.classList.add('bg-brand-surface', 'text-gray-300');
+                }
+            });
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // LIGHTBOX PREVIEW LOGIC
+        function openLightbox(imgSrc, caption) {
+            const modal = document.getElementById('lightboxModal');
+            document.getElementById('lightboxImg').src = imgSrc;
+            document.getElementById('lightboxCaption').textContent = caption;
+            modal.classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightboxModal').classList.add('hidden');
+        }
+
+        // CONTACT FORM LOGIC
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            showToast("Thank you! Your message has been sent to fitzonefitnessclub@gmail.com");
+            document.getElementById('contactForm').reset();
+        }
+
+        // TOAST NOTIFICATION HELPERS
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            toastMsg.textContent = message;
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 4000);
+        }
+
+        // Close modal when clicking outside contents
+        window.onclick = function(event) {
+            const modal = document.getElementById('joinModal');
+            const lightbox = document.getElementById('lightboxModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+            if (event.target === lightbox) {
+                closeLightbox();
+            }
+        }
+    </script>
+</body>
+</html>
+```
